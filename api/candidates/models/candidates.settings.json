@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "candidates",
+  "info": {
+    "name": "Candidates",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "code": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "vat": {
+      "type": "string"
+    },
+    "phonenumber": {
+      "type": "string"
+    },
+    "cellphone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "province": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "gender": {
+      "type": "string"
+    },
+    "debtCapacity": {
+      "type": "decimal"
+    }
+  }
+}

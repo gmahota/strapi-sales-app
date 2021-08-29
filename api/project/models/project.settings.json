@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "name": "Project",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "code": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "createdAt": {
+      "type": "date"
+    },
+    "status": {
+      "type": "string"
+    },
+    "total": {
+      "type": "decimal"
+    },
+    "totalPayment": {
+      "type": "decimal"
+    }
+  }
+}

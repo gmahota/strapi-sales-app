@@ -1,9 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "projects",
+  "collectionName": "products",
   "info": {
-    "name": "Product",
-    "description": ""
+    "name": "Products"
   },
   "options": {
     "increments": true,
@@ -20,16 +19,6 @@
     },
     "price": {
       "type": "decimal"
-    },
-    "createdAt": {
-      "type": "date"
-    },
-    "status": {
-      "type": "string"
-    },
-    "invoice_items": {
-      "via": "product",
-      "collection": "invoice-item"
     }
   }
 }

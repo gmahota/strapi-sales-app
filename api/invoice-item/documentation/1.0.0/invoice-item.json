@@ -535,46 +535,6 @@
           "id": {
             "type": "string"
           },
-          "product": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "code": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "price": {
-                "type": "number"
-              },
-              "createdAt": {
-                "type": "string"
-              },
-              "status": {
-                "type": "string"
-              },
-              "invoice_items": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
           "description": {
             "type": "string"
           },
@@ -623,9 +583,6 @@
               "total": {
                 "type": "number"
               },
-              "customer": {
-                "type": "string"
-              },
               "salles_man": {
                 "type": "string"
               },
@@ -646,6 +603,34 @@
               }
             }
           },
+          "product": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "code": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "price": {
+                "type": "number"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -654,9 +639,6 @@
       },
       "NewInvoice-item": {
         "properties": {
-          "product": {
-            "type": "string"
-          },
           "description": {
             "type": "string"
           },
@@ -682,6 +664,9 @@
             "type": "number"
           },
           "invoice": {
+            "type": "string"
+          },
+          "product": {
             "type": "string"
           },
           "published_at": {

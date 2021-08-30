@@ -1,9 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "candidates",
+  "collectionName": "customers",
   "info": {
-    "name": "Customer",
-    "description": ""
+    "name": "Customers"
   },
   "options": {
     "increments": true,
@@ -16,44 +15,25 @@
       "type": "string"
     },
     "address": {
-      "type": "string"
+      "type": "richtext"
     },
     "vat": {
       "type": "string"
     },
-    "phonenumber": {
+    "cellnumber1": {
       "type": "string"
     },
-    "cellphone": {
+    "cellnumber2": {
       "type": "string"
     },
-    "email": {
+    "numberIdentification": {
       "type": "string"
-    },
-    "country": {
-      "type": "string"
-    },
-    "province": {
-      "type": "string"
-    },
-    "status": {
-      "type": "string"
-    },
-    "gender": {
-      "type": "string"
-    },
-    "debtCapacity": {
-      "type": "decimal"
     },
     "latitude": {
       "type": "decimal"
     },
     "longitude": {
       "type": "decimal"
-    },
-    "invoices": {
-      "via": "customer",
-      "collection": "invoice"
     }
   }
 }

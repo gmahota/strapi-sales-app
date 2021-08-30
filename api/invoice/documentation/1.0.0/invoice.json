@@ -539,70 +539,6 @@
           "total": {
             "type": "number"
           },
-          "customer": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "address": {
-                "type": "string"
-              },
-              "vat": {
-                "type": "string"
-              },
-              "phonenumber": {
-                "type": "string"
-              },
-              "cellphone": {
-                "type": "string"
-              },
-              "email": {
-                "type": "string"
-              },
-              "country": {
-                "type": "string"
-              },
-              "province": {
-                "type": "string"
-              },
-              "status": {
-                "type": "string"
-              },
-              "gender": {
-                "type": "string"
-              },
-              "debtCapacity": {
-                "type": "number"
-              },
-              "latitude": {
-                "type": "number"
-              },
-              "longitude": {
-                "type": "number"
-              },
-              "invoices": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
           "salles_man": {
             "required": [
               "id"
@@ -662,9 +598,6 @@
                 "id": {
                   "type": "string"
                 },
-                "product": {
-                  "type": "string"
-                },
                 "description": {
                   "type": "string"
                 },
@@ -690,6 +623,9 @@
                   "type": "number"
                 },
                 "invoice": {
+                  "type": "string"
+                },
+                "product": {
                   "type": "string"
                 },
                 "published_at": {
@@ -728,9 +664,6 @@
           },
           "total": {
             "type": "number"
-          },
-          "customer": {
-            "type": "string"
           },
           "salles_man": {
             "type": "string"

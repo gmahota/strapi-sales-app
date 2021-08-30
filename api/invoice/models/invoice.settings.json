@@ -28,17 +28,13 @@
     "total": {
       "type": "decimal"
     },
-    "customer": {
-      "model": "candidates",
-      "via": "invoices"
-    },
     "salles_man": {
       "via": "invoices",
       "model": "salles-man"
     },
     "invoice_items": {
-      "collection": "invoice-item",
-      "via": "invoice"
+      "via": "invoice",
+      "collection": "invoice-item"
     }
   }
 }

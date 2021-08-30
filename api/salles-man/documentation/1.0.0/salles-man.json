@@ -582,9 +582,6 @@
                 "total": {
                   "type": "number"
                 },
-                "customer": {
-                  "type": "string"
-                },
                 "salles_man": {
                   "type": "string"
                 },

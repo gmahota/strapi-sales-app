@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/projects": {
+    "/customers": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find all the customers's records",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve customers document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Project"
+                    "$ref": "#/components/schemas/Customers"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Project"
+          "Customers"
         ],
         "parameters": [
           {
@@ -194,14 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new record",
+        "description": "Create a new customers record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve customers document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Project"
+                  "$ref": "#/components/schemas/Customers"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Project"
+          "Customers"
         ],
         "requestBody": {
           "description": "",
@@ -247,20 +247,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewProject"
+                "$ref": "#/components/schemas/NewCustomers"
               }
             }
           }
         }
       }
     },
-    "/projects/count": {
+    "/customers/count": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Retrieve the number of customers documents",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve customers document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -306,22 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Project"
+          "Customers"
         ],
         "parameters": []
       }
     },
-    "/projects/{id}": {
+    "/customers/{id}": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find one customers record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve customers document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Project"
+                  "$ref": "#/components/schemas/Customers"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Project"
+          "Customers"
         ],
         "parameters": [
           {
@@ -376,14 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a record",
+        "description": "Update a single customers record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve customers document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Project"
+                  "$ref": "#/components/schemas/Customers"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Project"
+          "Customers"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewProject"
+                "$ref": "#/components/schemas/NewCustomers"
               }
             }
           }
@@ -449,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a record",
+        "description": "Delete a single customers record",
         "responses": {
           "200": {
-            "description": "deletes a single record based on the ID supplied",
+            "description": "deletes a single customers based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Project"
+          "Customers"
         ],
         "parameters": [
           {
@@ -514,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Project": {
+      "Customers": {
         "required": [
           "id"
         ],
@@ -522,73 +522,29 @@
           "id": {
             "type": "string"
           },
-          "code": {
-            "type": "string"
-          },
           "name": {
             "type": "string"
           },
-          "price": {
-            "type": "number"
-          },
-          "createdAt": {
-            "type": "string",
-            "format": "date"
-          },
-          "status": {
+          "address": {
             "type": "string"
           },
-          "invoice_items": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "product": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "quantity": {
-                  "type": "number"
-                },
-                "amount": {
-                  "type": "string"
-                },
-                "barcode1": {
-                  "type": "string"
-                },
-                "barcode2": {
-                  "type": "string"
-                },
-                "vat": {
-                  "type": "number"
-                },
-                "discount": {
-                  "type": "number"
-                },
-                "total": {
-                  "type": "number"
-                },
-                "invoice": {
-                  "type": "string"
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
+          "vat": {
+            "type": "string"
+          },
+          "cellnumber1": {
+            "type": "string"
+          },
+          "cellnumber2": {
+            "type": "string"
+          },
+          "numberIdentification": {
+            "type": "string"
+          },
+          "latitude": {
+            "type": "number"
+          },
+          "longitude": {
+            "type": "number"
           },
           "published_at": {
             "type": "string",
@@ -596,29 +552,31 @@
           }
         }
       },
-      "NewProject": {
+      "NewCustomers": {
         "properties": {
-          "code": {
-            "type": "string"
-          },
           "name": {
             "type": "string"
           },
-          "price": {
-            "type": "number"
-          },
-          "createdAt": {
-            "type": "string",
-            "format": "date"
-          },
-          "status": {
+          "address": {
             "type": "string"
           },
-          "invoice_items": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "vat": {
+            "type": "string"
+          },
+          "cellnumber1": {
+            "type": "string"
+          },
+          "cellnumber2": {
+            "type": "string"
+          },
+          "numberIdentification": {
+            "type": "string"
+          },
+          "latitude": {
+            "type": "number"
+          },
+          "longitude": {
+            "type": "number"
           },
           "published_at": {
             "type": "string",
@@ -636,7 +594,7 @@
   },
   "tags": [
     {
-      "name": "Project"
+      "name": "Customers"
     }
   ]
 }

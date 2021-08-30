@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "projects",
   "info": {
-    "name": "Project",
+    "name": "Product",
     "description": ""
   },
   "options": {
@@ -27,11 +27,9 @@
     "status": {
       "type": "string"
     },
-    "total": {
-      "type": "decimal"
-    },
-    "totalPayment": {
-      "type": "decimal"
+    "invoice_items": {
+      "via": "product",
+      "collection": "invoice-item"
     }
   }
 }

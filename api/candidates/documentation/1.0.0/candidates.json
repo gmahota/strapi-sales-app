@@ -522,9 +522,6 @@
           "id": {
             "type": "string"
           },
-          "code": {
-            "type": "string"
-          },
           "name": {
             "type": "string"
           },
@@ -557,6 +554,62 @@
           },
           "debtCapacity": {
             "type": "number"
+          },
+          "latitude": {
+            "type": "number"
+          },
+          "longitude": {
+            "type": "number"
+          },
+          "invoices": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "FA",
+                    "VD"
+                  ]
+                },
+                "date": {
+                  "type": "string"
+                },
+                "vat": {
+                  "type": "number"
+                },
+                "total": {
+                  "type": "number"
+                },
+                "customer": {
+                  "type": "string"
+                },
+                "salles_man": {
+                  "type": "string"
+                },
+                "invoice_items": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
           },
           "published_at": {
             "type": "string",
@@ -566,9 +619,6 @@
       },
       "NewCandidates": {
         "properties": {
-          "code": {
-            "type": "string"
-          },
           "name": {
             "type": "string"
           },
@@ -601,6 +651,18 @@
           },
           "debtCapacity": {
             "type": "number"
+          },
+          "latitude": {
+            "type": "number"
+          },
+          "longitude": {
+            "type": "number"
+          },
+          "invoices": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "published_at": {
             "type": "string",

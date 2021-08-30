@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/projects": {
+    "/salles-men": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -10,9 +10,10 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Project"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
                   }
                 }
               }
@@ -51,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Project"
+          "Salles-man"
         ],
         "parameters": [
           {
@@ -201,72 +202,9 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Project"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Project"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewProject"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/projects/count": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
                   "properties": {
-                    "count": {
-                      "type": "integer"
+                    "foo": {
+                      "type": "string"
                     }
                   }
                 }
@@ -306,12 +244,22 @@
         },
         "summary": "",
         "tags": [
-          "Project"
+          "Salles-man"
         ],
-        "parameters": []
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewSalles-man"
+              }
+            }
+          }
+        }
       }
     },
-    "/projects/{id}": {
+    "/salles-men/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +269,11 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Project"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -359,7 +311,64 @@
         },
         "summary": "",
         "tags": [
-          "Project"
+          "Salles-man"
+        ],
+        "parameters": []
+      }
+    },
+    "/salles-men/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Salles-man"
         ],
         "parameters": [
           {
@@ -383,7 +392,11 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Project"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -421,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "Project"
+          "Salles-man"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewProject"
+                "$ref": "#/components/schemas/NewSalles-man"
               }
             }
           }
@@ -495,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "Project"
+          "Salles-man"
         ],
         "parameters": [
           {
@@ -514,7 +527,7 @@
   },
   "components": {
     "schemas": {
-      "Project": {
+      "Salles-man": {
         "required": [
           "id"
         ],
@@ -522,23 +535,28 @@
           "id": {
             "type": "string"
           },
-          "code": {
-            "type": "string"
-          },
           "name": {
             "type": "string"
           },
-          "price": {
-            "type": "number"
-          },
-          "createdAt": {
-            "type": "string",
-            "format": "date"
-          },
-          "status": {
+          "vat": {
             "type": "string"
           },
-          "invoice_items": {
+          "identificationNumber": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          },
+          "cellphone1": {
+            "type": "string"
+          },
+          "cellphone2": {
+            "type": "string"
+          },
+          "cellphone3": {
+            "type": "string"
+          },
+          "invoices": {
             "type": "array",
             "items": {
               "required": [
@@ -548,35 +566,33 @@
                 "id": {
                   "type": "string"
                 },
-                "product": {
-                  "type": "string"
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "FA",
+                    "VD"
+                  ]
                 },
-                "description": {
-                  "type": "string"
-                },
-                "quantity": {
-                  "type": "number"
-                },
-                "amount": {
-                  "type": "string"
-                },
-                "barcode1": {
-                  "type": "string"
-                },
-                "barcode2": {
+                "date": {
                   "type": "string"
                 },
                 "vat": {
                   "type": "number"
                 },
-                "discount": {
-                  "type": "number"
-                },
                 "total": {
                   "type": "number"
                 },
-                "invoice": {
+                "customer": {
                   "type": "string"
+                },
+                "salles_man": {
+                  "type": "string"
+                },
+                "invoice_items": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
                 "published_at": {
                   "type": "string"
@@ -596,25 +612,30 @@
           }
         }
       },
-      "NewProject": {
+      "NewSalles-man": {
         "properties": {
-          "code": {
-            "type": "string"
-          },
           "name": {
             "type": "string"
           },
-          "price": {
-            "type": "number"
-          },
-          "createdAt": {
-            "type": "string",
-            "format": "date"
-          },
-          "status": {
+          "vat": {
             "type": "string"
           },
-          "invoice_items": {
+          "identificationNumber": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          },
+          "cellphone1": {
+            "type": "string"
+          },
+          "cellphone2": {
+            "type": "string"
+          },
+          "cellphone3": {
+            "type": "string"
+          },
+          "invoices": {
             "type": "array",
             "items": {
               "type": "string"
@@ -634,9 +655,5 @@
       }
     }
   },
-  "tags": [
-    {
-      "name": "Project"
-    }
-  ]
+  "tags": []
 }

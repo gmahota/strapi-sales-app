@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/projects": {
+    "/invoices": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Project"
+                    "$ref": "#/components/schemas/Invoice"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Project"
+          "Invoice"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Project"
+                  "$ref": "#/components/schemas/Invoice"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Project"
+          "Invoice"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewProject"
+                "$ref": "#/components/schemas/NewInvoice"
               }
             }
           }
         }
       }
     },
-    "/projects/count": {
+    "/invoices/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Project"
+          "Invoice"
         ],
         "parameters": []
       }
     },
-    "/projects/{id}": {
+    "/invoices/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Project"
+                  "$ref": "#/components/schemas/Invoice"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Project"
+          "Invoice"
         ],
         "parameters": [
           {
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Project"
+                  "$ref": "#/components/schemas/Invoice"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Project"
+          "Invoice"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewProject"
+                "$ref": "#/components/schemas/NewInvoice"
               }
             }
           }
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Project"
+          "Invoice"
         ],
         "parameters": [
           {
@@ -514,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Project": {
+      "Invoice": {
         "required": [
           "id"
         ],
@@ -522,21 +522,132 @@
           "id": {
             "type": "string"
           },
-          "code": {
-            "type": "string"
+          "type": {
+            "type": "string",
+            "enum": [
+              "FA",
+              "VD"
+            ]
           },
-          "name": {
-            "type": "string"
+          "date": {
+            "type": "string",
+            "format": "date-time"
           },
-          "price": {
+          "vat": {
             "type": "number"
           },
-          "createdAt": {
-            "type": "string",
-            "format": "date"
+          "total": {
+            "type": "number"
           },
-          "status": {
-            "type": "string"
+          "customer": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "address": {
+                "type": "string"
+              },
+              "vat": {
+                "type": "string"
+              },
+              "phonenumber": {
+                "type": "string"
+              },
+              "cellphone": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "country": {
+                "type": "string"
+              },
+              "province": {
+                "type": "string"
+              },
+              "status": {
+                "type": "string"
+              },
+              "gender": {
+                "type": "string"
+              },
+              "debtCapacity": {
+                "type": "number"
+              },
+              "latitude": {
+                "type": "number"
+              },
+              "longitude": {
+                "type": "number"
+              },
+              "invoices": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "salles_man": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "vat": {
+                "type": "string"
+              },
+              "identificationNumber": {
+                "type": "string"
+              },
+              "address": {
+                "type": "string"
+              },
+              "cellphone1": {
+                "type": "string"
+              },
+              "cellphone2": {
+                "type": "string"
+              },
+              "cellphone3": {
+                "type": "string"
+              },
+              "invoices": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
           },
           "invoice_items": {
             "type": "array",
@@ -596,22 +707,29 @@
           }
         }
       },
-      "NewProject": {
+      "NewInvoice": {
         "properties": {
-          "code": {
-            "type": "string"
+          "type": {
+            "type": "string",
+            "enum": [
+              "FA",
+              "VD"
+            ]
           },
-          "name": {
-            "type": "string"
+          "date": {
+            "type": "string",
+            "format": "date-time"
           },
-          "price": {
+          "vat": {
             "type": "number"
           },
-          "createdAt": {
-            "type": "string",
-            "format": "date"
+          "total": {
+            "type": "number"
           },
-          "status": {
+          "customer": {
+            "type": "string"
+          },
+          "salles_man": {
             "type": "string"
           },
           "invoice_items": {
@@ -636,7 +754,7 @@
   },
   "tags": [
     {
-      "name": "Project"
+      "name": "Invoice"
     }
   ]
 }

@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "candidates",
   "info": {
-    "name": "Candidates",
+    "name": "Customer",
     "description": ""
   },
   "options": {
@@ -12,9 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "code": {
-      "type": "string"
-    },
     "name": {
       "type": "string"
     },
@@ -47,6 +44,16 @@
     },
     "debtCapacity": {
       "type": "decimal"
+    },
+    "latitude": {
+      "type": "decimal"
+    },
+    "longitude": {
+      "type": "decimal"
+    },
+    "invoices": {
+      "via": "customer",
+      "collection": "invoice"
     }
   }
 }

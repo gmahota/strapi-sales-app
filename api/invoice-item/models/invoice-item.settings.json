@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "invoice_items",
+  "info": {
+    "name": "Invoice Item"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "product": {
+      "model": "project",
+      "via": "invoice_items"
+    },
+    "description": {
+      "type": "string"
+    },
+    "quantity": {
+      "type": "decimal"
+    },
+    "amount": {
+      "type": "string"
+    },
+    "barcode1": {
+      "type": "string"
+    },
+    "barcode2": {
+      "type": "string"
+    },
+    "vat": {
+      "type": "decimal"
+    },
+    "discount": {
+      "type": "decimal"
+    },
+    "total": {
+      "type": "decimal"
+    },
+    "invoice": {
+      "via": "invoice_items",
+      "model": "invoice"
+    }
+  }
+}

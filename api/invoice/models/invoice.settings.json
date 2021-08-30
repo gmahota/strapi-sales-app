@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "invoices",
+  "info": {
+    "name": "Invoice",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "FA",
+        "VD"
+      ]
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "vat": {
+      "type": "decimal"
+    },
+    "total": {
+      "type": "decimal"
+    },
+    "customer": {
+      "model": "candidates",
+      "via": "invoices"
+    },
+    "salles_man": {
+      "model": "salles-man",
+      "via": "invoices"
+    },
+    "invoice_items": {
+      "collection": "invoice-item",
+      "via": "invoice"
+    }
+  }
+}

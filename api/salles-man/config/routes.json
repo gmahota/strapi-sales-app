@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/salles-men",
+      "handler": "salles-man.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/salles-men/count",
+      "handler": "salles-man.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/salles-men/:id",
+      "handler": "salles-man.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/salles-men",
+      "handler": "salles-man.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/salles-men/:id",
+      "handler": "salles-man.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/salles-men/:id",
+      "handler": "salles-man.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

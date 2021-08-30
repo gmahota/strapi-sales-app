@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "salles_men",
+  "info": {
+    "name": "SallesMan"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "vat": {
+      "type": "string"
+    },
+    "identificationNumber": {
+      "type": "string"
+    },
+    "address": {
+      "type": "richtext"
+    },
+    "cellphone1": {
+      "type": "string"
+    },
+    "cellphone2": {
+      "type": "string"
+    },
+    "cellphone3": {
+      "type": "string"
+    },
+    "invoices": {
+      "via": "salles_man",
+      "collection": "invoice"
+    }
+  }
+}

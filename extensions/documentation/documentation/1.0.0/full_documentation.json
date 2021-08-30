@@ -27,11 +27,11 @@
       "description": "Development server"
     },
     {
-      "url": "YOUR_STAGING_SERVER",
+      "url": "https://strapi-sales-api.herokuapp.com",
       "description": "Staging server"
     },
     {
-      "url": "YOUR_PRODUCTION_SERVER",
+      "url": "https://strapi-sales-api.herokuapp.com",
       "description": "Production server"
     }
   ],

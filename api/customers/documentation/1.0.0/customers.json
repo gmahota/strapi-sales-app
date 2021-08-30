@@ -531,10 +531,10 @@
           "vat": {
             "type": "string"
           },
-          "cellnumber1": {
+          "cellphone1": {
             "type": "string"
           },
-          "cellnumber2": {
+          "cellphone2": {
             "type": "string"
           },
           "numberIdentification": {
@@ -563,10 +563,10 @@
           "vat": {
             "type": "string"
           },
-          "cellnumber1": {
+          "cellphone1": {
             "type": "string"
           },
-          "cellnumber2": {
+          "cellphone2": {
             "type": "string"
           },
           "numberIdentification": {

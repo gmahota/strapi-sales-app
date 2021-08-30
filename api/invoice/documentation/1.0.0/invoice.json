@@ -638,6 +638,9 @@
                   "type": "string"
                 }
               },
+              "admin_user": {
+                "type": "string"
+              },
               "published_at": {
                 "type": "string"
               },

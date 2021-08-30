@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "salles_men",
   "info": {
-    "name": "SallesMan"
+    "name": "SallesMan",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -35,6 +36,10 @@
     "invoices": {
       "via": "salles_man",
       "collection": "invoice"
+    },
+    "admin_user": {
+      "plugin": "admin",
+      "model": "user"
     }
   }
 }

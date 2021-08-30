@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "08/30/2021 8:48:20 AM"
+    "x-generation-date": "08/30/2021 8:58:31 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -5310,6 +5310,9 @@
                   "type": "string"
                 }
               },
+              "admin_user": {
+                "type": "string"
+              },
               "published_at": {
                 "type": "string"
               },
@@ -5619,6 +5622,53 @@
               }
             }
           },
+          "admin_user": {
+            "required": [
+              "id",
+              "email"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "firstname": {
+                "type": "string"
+              },
+              "lastname": {
+                "type": "string"
+              },
+              "username": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              },
+              "resetPasswordToken": {
+                "type": "string"
+              },
+              "registrationToken": {
+                "type": "string"
+              },
+              "isActive": {
+                "type": "boolean"
+              },
+              "roles": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "blocked": {
+                "type": "boolean"
+              },
+              "preferedLanguage": {
+                "type": "string"
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -5653,6 +5703,9 @@
             "items": {
               "type": "string"
             }
+          },
+          "admin_user": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",

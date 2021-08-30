@@ -33,8 +33,8 @@
       "via": "invoices"
     },
     "salles_man": {
-      "model": "salles-man",
-      "via": "invoices"
+      "via": "invoices",
+      "model": "salles-man"
     },
     "invoice_items": {
       "collection": "invoice-item",

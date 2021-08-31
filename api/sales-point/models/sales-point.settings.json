@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sales_points",
+  "info": {
+    "name": "Sales Point",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "code": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "customer": {
+      "via": "sales_points",
+      "model": "customers"
+    },
+    "latitude": {
+      "type": "float"
+    },
+    "longitude": {
+      "type": "float"
+    },
+    "radius": {
+      "type": "float"
+    }
+  }
+}

@@ -35,6 +35,10 @@
     },
     "longitude": {
       "type": "decimal"
+    },
+    "sales_points": {
+      "via": "customer",
+      "collection": "sales-point"
     }
   }
 }

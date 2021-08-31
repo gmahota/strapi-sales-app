@@ -36,9 +36,9 @@
     "longitude": {
       "type": "decimal"
     },
-    "sales_points": {
-      "via": "customer",
-      "collection": "sales-point"
+    "sales_point": {
+      "model": "sales-point",
+      "via": "customers"
     }
   }
 }

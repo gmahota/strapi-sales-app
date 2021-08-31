@@ -541,55 +541,6 @@
           "name": {
             "type": "string"
           },
-          "customer": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "address": {
-                "type": "string"
-              },
-              "vat": {
-                "type": "string"
-              },
-              "cellphone1": {
-                "type": "string"
-              },
-              "cellphone2": {
-                "type": "string"
-              },
-              "numberIdentification": {
-                "type": "string"
-              },
-              "latitude": {
-                "type": "number"
-              },
-              "longitude": {
-                "type": "number"
-              },
-              "sales_points": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
           "latitude": {
             "type": "number"
           },
@@ -598,6 +549,55 @@
           },
           "radius": {
             "type": "number"
+          },
+          "customers": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "address": {
+                  "type": "string"
+                },
+                "vat": {
+                  "type": "string"
+                },
+                "cellphone1": {
+                  "type": "string"
+                },
+                "cellphone2": {
+                  "type": "string"
+                },
+                "numberIdentification": {
+                  "type": "string"
+                },
+                "latitude": {
+                  "type": "number"
+                },
+                "longitude": {
+                  "type": "number"
+                },
+                "sales_point": {
+                  "type": "string"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
           },
           "published_at": {
             "type": "string",
@@ -613,9 +613,6 @@
           "name": {
             "type": "string"
           },
-          "customer": {
-            "type": "string"
-          },
           "latitude": {
             "type": "number"
           },
@@ -624,6 +621,12 @@
           },
           "radius": {
             "type": "number"
+          },
+          "customers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "published_at": {
             "type": "string",

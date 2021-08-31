@@ -18,10 +18,6 @@
     "name": {
       "type": "string"
     },
-    "customer": {
-      "via": "sales_points",
-      "model": "customers"
-    },
     "latitude": {
       "type": "float"
     },
@@ -30,6 +26,10 @@
     },
     "radius": {
       "type": "float"
+    },
+    "customers": {
+      "via": "sales_point",
+      "collection": "customers"
     }
   }
 }

@@ -587,6 +587,12 @@
                 "sales_point": {
                   "type": "string"
                 },
+                "invoices": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
                 "published_at": {
                   "type": "string"
                 },

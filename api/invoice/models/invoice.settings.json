@@ -35,6 +35,10 @@
     "invoice_items": {
       "via": "invoice",
       "collection": "invoice-item"
+    },
+    "customer": {
+      "model": "customers",
+      "via": "invoices"
     }
   }
 }

@@ -640,6 +640,58 @@
               }
             }
           },
+          "customer": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "address": {
+                "type": "string"
+              },
+              "vat": {
+                "type": "string"
+              },
+              "cellphone1": {
+                "type": "string"
+              },
+              "cellphone2": {
+                "type": "string"
+              },
+              "numberIdentification": {
+                "type": "string"
+              },
+              "latitude": {
+                "type": "number"
+              },
+              "longitude": {
+                "type": "number"
+              },
+              "sales_point": {
+                "type": "string"
+              },
+              "invoices": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -673,6 +725,9 @@
             "items": {
               "type": "string"
             }
+          },
+          "customer": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",

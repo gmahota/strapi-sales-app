@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "08/31/2021 7:43:43 PM"
+    "x-generation-date": "09/24/2021 4:32:17 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -5451,6 +5451,56 @@
               }
             }
           },
+          "invoices": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "FA",
+                    "VD"
+                  ]
+                },
+                "date": {
+                  "type": "string"
+                },
+                "vat": {
+                  "type": "number"
+                },
+                "total": {
+                  "type": "number"
+                },
+                "salles_man": {
+                  "type": "string"
+                },
+                "invoice_items": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "customer": {
+                  "type": "string"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -5485,6 +5535,12 @@
           },
           "sales_point": {
             "type": "string"
+          },
+          "invoices": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "published_at": {
             "type": "string",
@@ -5562,6 +5618,9 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "customer": {
+                "type": "string"
               },
               "published_at": {
                 "type": "string"
@@ -5778,6 +5837,58 @@
               }
             }
           },
+          "customer": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "address": {
+                "type": "string"
+              },
+              "vat": {
+                "type": "string"
+              },
+              "cellphone1": {
+                "type": "string"
+              },
+              "cellphone2": {
+                "type": "string"
+              },
+              "numberIdentification": {
+                "type": "string"
+              },
+              "latitude": {
+                "type": "number"
+              },
+              "longitude": {
+                "type": "number"
+              },
+              "sales_point": {
+                "type": "string"
+              },
+              "invoices": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -5811,6 +5922,9 @@
             "items": {
               "type": "string"
             }
+          },
+          "customer": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",
@@ -5930,6 +6044,12 @@
                 "sales_point": {
                   "type": "string"
                 },
+                "invoices": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
                 "published_at": {
                   "type": "string"
                 },
@@ -6046,6 +6166,9 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "customer": {
+                  "type": "string"
                 },
                 "published_at": {
                   "type": "string"

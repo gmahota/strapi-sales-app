@@ -592,6 +592,9 @@
                   "type": "string"
                 }
               },
+              "customer": {
+                "type": "string"
+              },
               "published_at": {
                 "type": "string"
               },

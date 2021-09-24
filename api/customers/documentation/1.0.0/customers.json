@@ -586,6 +586,56 @@
               }
             }
           },
+          "invoices": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "FA",
+                    "VD"
+                  ]
+                },
+                "date": {
+                  "type": "string"
+                },
+                "vat": {
+                  "type": "number"
+                },
+                "total": {
+                  "type": "number"
+                },
+                "salles_man": {
+                  "type": "string"
+                },
+                "invoice_items": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "customer": {
+                  "type": "string"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -620,6 +670,12 @@
           },
           "sales_point": {
             "type": "string"
+          },
+          "invoices": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "published_at": {
             "type": "string",

@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "09/24/2021 4:32:17 PM"
+    "x-generation-date": "09/24/2021 4:40:19 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -5568,7 +5568,7 @@
           "quantity": {
             "type": "number"
           },
-          "amount": {
+          "price": {
             "type": "string"
           },
           "barcode1": {
@@ -5583,7 +5583,7 @@
           "discount": {
             "type": "number"
           },
-          "total": {
+          "amount": {
             "type": "number"
           },
           "invoice": {
@@ -5675,7 +5675,7 @@
           "quantity": {
             "type": "number"
           },
-          "amount": {
+          "price": {
             "type": "string"
           },
           "barcode1": {
@@ -5690,7 +5690,7 @@
           "discount": {
             "type": "number"
           },
-          "total": {
+          "amount": {
             "type": "number"
           },
           "invoice": {
@@ -5801,7 +5801,7 @@
                 "quantity": {
                   "type": "number"
                 },
-                "amount": {
+                "price": {
                   "type": "string"
                 },
                 "barcode1": {
@@ -5816,7 +5816,7 @@
                 "discount": {
                   "type": "number"
                 },
-                "total": {
+                "amount": {
                   "type": "number"
                 },
                 "invoice": {

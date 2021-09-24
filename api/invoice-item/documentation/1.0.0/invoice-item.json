@@ -541,7 +541,7 @@
           "quantity": {
             "type": "number"
           },
-          "amount": {
+          "price": {
             "type": "string"
           },
           "barcode1": {
@@ -556,7 +556,7 @@
           "discount": {
             "type": "number"
           },
-          "total": {
+          "amount": {
             "type": "number"
           },
           "invoice": {
@@ -648,7 +648,7 @@
           "quantity": {
             "type": "number"
           },
-          "amount": {
+          "price": {
             "type": "string"
           },
           "barcode1": {
@@ -663,7 +663,7 @@
           "discount": {
             "type": "number"
           },
-          "total": {
+          "amount": {
             "type": "number"
           },
           "invoice": {

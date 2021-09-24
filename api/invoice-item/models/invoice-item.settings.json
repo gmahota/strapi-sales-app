@@ -18,7 +18,7 @@
     "quantity": {
       "type": "decimal"
     },
-    "amount": {
+    "price": {
       "type": "string"
     },
     "barcode1": {
@@ -33,7 +33,7 @@
     "discount": {
       "type": "decimal"
     },
-    "total": {
+    "amount": {
       "type": "decimal"
     },
     "invoice": {

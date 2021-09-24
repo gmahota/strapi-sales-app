@@ -34,7 +34,8 @@
     },
     "invoice_items": {
       "via": "invoice",
-      "collection": "invoice-item"
+      "collection": "invoice-item",
+      "repeatable": true
     },
     "customer": {
       "model": "customers",

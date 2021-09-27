@@ -624,6 +624,9 @@
                 "customer": {
                   "type": "string"
                 },
+                "items": {
+                  "type": "component"
+                },
                 "published_at": {
                   "type": "string"
                 },

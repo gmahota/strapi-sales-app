@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "09/24/2021 4:40:19 PM"
+    "x-generation-date": "09/27/2021 6:49:47 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -5489,6 +5489,9 @@
                 "customer": {
                   "type": "string"
                 },
+                "items": {
+                  "type": "component"
+                },
                 "published_at": {
                   "type": "string"
                 },
@@ -5621,6 +5624,9 @@
               },
               "customer": {
                 "type": "string"
+              },
+              "items": {
+                "type": "component"
               },
               "published_at": {
                 "type": "string"
@@ -5889,6 +5895,32 @@
               }
             }
           },
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "price": {
+                  "type": "number"
+                },
+                "amount": {
+                  "type": "number"
+                }
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -5925,6 +5957,32 @@
           },
           "customer": {
             "type": "string"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "price": {
+                  "type": "number"
+                },
+                "amount": {
+                  "type": "number"
+                }
+              }
+            }
           },
           "published_at": {
             "type": "string",
@@ -6169,6 +6227,9 @@
                 },
                 "customer": {
                   "type": "string"
+                },
+                "items": {
+                  "type": "component"
                 },
                 "published_at": {
                   "type": "string"

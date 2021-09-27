@@ -34,12 +34,16 @@
     },
     "invoice_items": {
       "via": "invoice",
-      "collection": "invoice-item",
-      "repeatable": true
+      "collection": "invoice-item"
     },
     "customer": {
       "model": "customers",
       "via": "invoices"
+    },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "items.invoice-item"
     }
   }
 }

@@ -2,7 +2,8 @@
   "collectionName": "components_items_invoice_items",
   "info": {
     "name": "invoice-item",
-    "icon": "align-justify"
+    "icon": "align-justify",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -17,6 +18,15 @@
     },
     "amount": {
       "type": "decimal"
+    },
+    "discount": {
+      "type": "decimal"
+    },
+    "vat": {
+      "type": "decimal"
+    },
+    "product": {
+      "model": "products"
     }
   }
 }

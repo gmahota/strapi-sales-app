@@ -27,6 +27,9 @@
     },
     "product": {
       "model": "products"
+    },
+    "quantity": {
+      "type": "decimal"
     }
   }
 }

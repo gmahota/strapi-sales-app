@@ -615,12 +615,6 @@
                 "salles_man": {
                   "type": "string"
                 },
-                "invoice_items": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "customer": {
                   "type": "string"
                 },

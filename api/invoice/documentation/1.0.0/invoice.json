@@ -588,58 +588,6 @@
               }
             }
           },
-          "invoice_items": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "quantity": {
-                  "type": "number"
-                },
-                "price": {
-                  "type": "string"
-                },
-                "barcode1": {
-                  "type": "string"
-                },
-                "barcode2": {
-                  "type": "string"
-                },
-                "vat": {
-                  "type": "number"
-                },
-                "discount": {
-                  "type": "number"
-                },
-                "amount": {
-                  "type": "number"
-                },
-                "invoice": {
-                  "type": "string"
-                },
-                "product": {
-                  "type": "string"
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
           "customer": {
             "required": [
               "id"
@@ -748,6 +696,9 @@
                       "type": "string"
                     }
                   }
+                },
+                "quantity": {
+                  "type": "number"
                 }
               }
             }
@@ -779,12 +730,6 @@
           },
           "salles_man": {
             "type": "string"
-          },
-          "invoice_items": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
           },
           "customer": {
             "type": "string"
@@ -845,6 +790,9 @@
                       "type": "string"
                     }
                   }
+                },
+                "quantity": {
+                  "type": "number"
                 }
               }
             }

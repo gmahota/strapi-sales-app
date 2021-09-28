@@ -657,9 +657,6 @@
                 "description": {
                   "type": "string"
                 },
-                "amount": {
-                  "type": "string"
-                },
                 "type": {
                   "type": "string",
                   "enum": [
@@ -683,6 +680,9 @@
                 },
                 "date": {
                   "type": "string"
+                },
+                "amount": {
+                  "type": "number"
                 },
                 "published_at": {
                   "type": "string"

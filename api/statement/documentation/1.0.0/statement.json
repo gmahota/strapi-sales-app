@@ -528,9 +528,6 @@
           "description": {
             "type": "string"
           },
-          "amount": {
-            "type": "string"
-          },
           "type": {
             "type": "string",
             "enum": [
@@ -660,6 +657,9 @@
             "type": "string",
             "format": "date-time"
           },
+          "amount": {
+            "type": "number"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -672,9 +672,6 @@
             "type": "string"
           },
           "description": {
-            "type": "string"
-          },
-          "amount": {
             "type": "string"
           },
           "type": {
@@ -701,6 +698,9 @@
           "date": {
             "type": "string",
             "format": "date-time"
+          },
+          "amount": {
+            "type": "number"
           },
           "published_at": {
             "type": "string",

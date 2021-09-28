@@ -18,9 +18,6 @@
     "description": {
       "type": "string"
     },
-    "amount": {
-      "type": "string"
-    },
     "type": {
       "type": "enumeration",
       "enum": [
@@ -45,6 +42,9 @@
     },
     "date": {
       "type": "datetime"
+    },
+    "amount": {
+      "type": "decimal"
     }
   }
 }

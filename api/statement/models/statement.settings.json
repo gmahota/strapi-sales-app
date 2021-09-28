@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "statement",
+  "info": {
+    "name": "Statement",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "code": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "debit",
+        "credit"
+      ]
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "pedding",
+        "cancel",
+        "closed"
+      ]
+    }
+  }
+}

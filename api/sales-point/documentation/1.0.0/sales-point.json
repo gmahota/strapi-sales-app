@@ -593,6 +593,14 @@
                     "type": "string"
                   }
                 },
+                "status": {
+                  "type": "string",
+                  "enum": [
+                    "pedding",
+                    "cancel",
+                    "close"
+                  ]
+                },
                 "published_at": {
                   "type": "string"
                 },

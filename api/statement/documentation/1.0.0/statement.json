@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/invoices": {
+    "/statements": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Invoice"
+                    "$ref": "#/components/schemas/Statement"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Invoice"
+          "Statement"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Invoice"
+                  "$ref": "#/components/schemas/Statement"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Invoice"
+          "Statement"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewInvoice"
+                "$ref": "#/components/schemas/NewStatement"
               }
             }
           }
         }
       }
     },
-    "/invoices/count": {
+    "/statements/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Invoice"
+          "Statement"
         ],
         "parameters": []
       }
     },
-    "/invoices/{id}": {
+    "/statements/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Invoice"
+                  "$ref": "#/components/schemas/Statement"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Invoice"
+          "Statement"
         ],
         "parameters": [
           {
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Invoice"
+                  "$ref": "#/components/schemas/Statement"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Invoice"
+          "Statement"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewInvoice"
+                "$ref": "#/components/schemas/NewStatement"
               }
             }
           }
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Invoice"
+          "Statement"
         ],
         "parameters": [
           {
@@ -514,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Invoice": {
+      "Statement": {
         "required": [
           "id"
         ],
@@ -522,194 +522,29 @@
           "id": {
             "type": "string"
           },
+          "code": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "string"
+          },
           "type": {
             "type": "string",
             "enum": [
-              "FA",
-              "VD"
+              "debit",
+              "credit"
             ]
           },
-          "date": {
+          "status": {
             "type": "string",
-            "format": "date-time"
-          },
-          "vat": {
-            "type": "number"
-          },
-          "total": {
-            "type": "number"
-          },
-          "salles_man": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "vat": {
-                "type": "string"
-              },
-              "identificationNumber": {
-                "type": "string"
-              },
-              "address": {
-                "type": "string"
-              },
-              "cellphone1": {
-                "type": "string"
-              },
-              "cellphone2": {
-                "type": "string"
-              },
-              "cellphone3": {
-                "type": "string"
-              },
-              "invoices": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "admin_user": {
-                "type": "string"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "customer": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "address": {
-                "type": "string"
-              },
-              "vat": {
-                "type": "string"
-              },
-              "cellphone1": {
-                "type": "string"
-              },
-              "cellphone2": {
-                "type": "string"
-              },
-              "numberIdentification": {
-                "type": "string"
-              },
-              "latitude": {
-                "type": "number"
-              },
-              "longitude": {
-                "type": "number"
-              },
-              "sales_point": {
-                "type": "string"
-              },
-              "invoices": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "status": {
-                "type": "string",
-                "enum": [
-                  "pedding",
-                  "cancel",
-                  "close"
-                ]
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "items": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "type": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "price": {
-                  "type": "number"
-                },
-                "amount": {
-                  "type": "number"
-                },
-                "discount": {
-                  "type": "number"
-                },
-                "vat": {
-                  "type": "number"
-                },
-                "product": {
-                  "required": [
-                    "id"
-                  ],
-                  "properties": {
-                    "id": {
-                      "type": "string"
-                    },
-                    "code": {
-                      "type": "string"
-                    },
-                    "name": {
-                      "type": "string"
-                    },
-                    "price": {
-                      "type": "number"
-                    },
-                    "published_at": {
-                      "type": "string"
-                    },
-                    "created_by": {
-                      "type": "string"
-                    },
-                    "updated_by": {
-                      "type": "string"
-                    }
-                  }
-                },
-                "quantity": {
-                  "type": "number"
-                }
-              }
-            }
+            "enum": [
+              "pedding",
+              "cancel",
+              "closed"
+            ]
           },
           "published_at": {
             "type": "string",
@@ -717,93 +552,31 @@
           }
         }
       },
-      "NewInvoice": {
+      "NewStatement": {
         "properties": {
+          "code": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "string"
+          },
           "type": {
             "type": "string",
             "enum": [
-              "FA",
-              "VD"
+              "debit",
+              "credit"
             ]
           },
-          "date": {
+          "status": {
             "type": "string",
-            "format": "date-time"
-          },
-          "vat": {
-            "type": "number"
-          },
-          "total": {
-            "type": "number"
-          },
-          "salles_man": {
-            "type": "string"
-          },
-          "customer": {
-            "type": "string"
-          },
-          "items": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "type": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "price": {
-                  "type": "number"
-                },
-                "amount": {
-                  "type": "number"
-                },
-                "discount": {
-                  "type": "number"
-                },
-                "vat": {
-                  "type": "number"
-                },
-                "product": {
-                  "required": [
-                    "id"
-                  ],
-                  "properties": {
-                    "id": {
-                      "type": "string"
-                    },
-                    "code": {
-                      "type": "string"
-                    },
-                    "name": {
-                      "type": "string"
-                    },
-                    "price": {
-                      "type": "number"
-                    },
-                    "published_at": {
-                      "type": "string"
-                    },
-                    "created_by": {
-                      "type": "string"
-                    },
-                    "updated_by": {
-                      "type": "string"
-                    }
-                  }
-                },
-                "quantity": {
-                  "type": "number"
-                }
-              }
-            }
+            "enum": [
+              "pedding",
+              "cancel",
+              "closed"
+            ]
           },
           "published_at": {
             "type": "string",
@@ -821,7 +594,7 @@
   },
   "tags": [
     {
-      "name": "Invoice"
+      "name": "Statement"
     }
   ]
 }

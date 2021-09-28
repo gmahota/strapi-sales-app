@@ -35,6 +35,13 @@
         "cancel",
         "closed"
       ]
+    },
+    "invoice": {
+      "model": "invoice"
+    },
+    "customer": {
+      "model": "customers",
+      "via": "statements"
     }
   }
 }

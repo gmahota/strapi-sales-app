@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "09/28/2021 8:26:13 PM"
+    "x-generation-date": "09/28/2021 8:28:22 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -5493,6 +5493,58 @@
               "close"
             ]
           },
+          "statements": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "code": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "amount": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "debit",
+                    "credit"
+                  ]
+                },
+                "status": {
+                  "type": "string",
+                  "enum": [
+                    "pedding",
+                    "cancel",
+                    "closed"
+                  ]
+                },
+                "invoice": {
+                  "type": "string"
+                },
+                "customer": {
+                  "type": "string"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -5541,6 +5593,12 @@
               "cancel",
               "close"
             ]
+          },
+          "statements": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "published_at": {
             "type": "string",
@@ -5676,6 +5734,12 @@
                   "cancel",
                   "close"
                 ]
+              },
+              "statements": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               },
               "published_at": {
                 "type": "string"
@@ -5977,6 +6041,12 @@
                     "close"
                   ]
                 },
+                "statements": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
                 "published_at": {
                   "type": "string"
                 },
@@ -6235,6 +6305,116 @@
               "closed"
             ]
           },
+          "invoice": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string",
+                "enum": [
+                  "FA",
+                  "VD"
+                ]
+              },
+              "date": {
+                "type": "string"
+              },
+              "vat": {
+                "type": "number"
+              },
+              "total": {
+                "type": "number"
+              },
+              "salles_man": {
+                "type": "string"
+              },
+              "customer": {
+                "type": "string"
+              },
+              "items": {
+                "type": "component"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "customer": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "address": {
+                "type": "string"
+              },
+              "vat": {
+                "type": "string"
+              },
+              "cellphone1": {
+                "type": "string"
+              },
+              "cellphone2": {
+                "type": "string"
+              },
+              "numberIdentification": {
+                "type": "string"
+              },
+              "latitude": {
+                "type": "number"
+              },
+              "longitude": {
+                "type": "number"
+              },
+              "sales_point": {
+                "type": "string"
+              },
+              "invoices": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "pedding",
+                  "cancel",
+                  "close"
+                ]
+              },
+              "statements": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -6266,6 +6446,12 @@
               "cancel",
               "closed"
             ]
+          },
+          "invoice": {
+            "type": "string"
+          },
+          "customer": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",

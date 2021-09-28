@@ -681,6 +681,9 @@
                 "customer": {
                   "type": "string"
                 },
+                "date": {
+                  "type": "string"
+                },
                 "published_at": {
                   "type": "string"
                 },

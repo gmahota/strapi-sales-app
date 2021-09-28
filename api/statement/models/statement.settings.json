@@ -42,6 +42,9 @@
     "customer": {
       "model": "customers",
       "via": "statements"
+    },
+    "date": {
+      "type": "datetime"
     }
   }
 }
